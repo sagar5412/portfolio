@@ -1,26 +1,78 @@
-import EncryptedTextName from "./encrypted-text-name"
-import Typewriter from "./ui/typewriter"
-
-export function Hero() {
-    return <>
-        <div className="flex flex-col gap-4">
-            <div className="flex flex-row items-center justify-start gap-12">
-                <div className="flex shrink-0">
-                    <img
-                        src="https://static.vecteezy.com/system/resources/previews/023/506/852/non_2x/cute-kawaii-mushroom-chibi-mascot-cartoon-style-vector.jpg"
-                        alt="Hero Graphic"
-                        className="w-48 h-48 object-cover rounded shadow-lg"
-                    />
-                </div>
-                <div className="flex flex-col gap-2 text-left">
-                    <div className="text-2xl font-bold">Hi,</div>
-                    <div className="text-3xl font-bold sm:text-5xl"><EncryptedTextName /></div>
-                    <div><Typewriter /></div>
-                </div>
-            </div>
-            <div className="text-lg text-[#CBCBCB]">
-                I am a <b className="text-white">Full Stack Developer</b> with hands-on experience in building and deploying real-world projects. I specialize in developing scalable, efficient, and user-friendly applications with a strong focus on clean architecture and seamless user experiences.
-            </div>
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { profile } from "../data/profile";
+function BuildMark() {
+  return (
+    <div className="build-mark" aria-hidden="true">
+      <svg viewBox="0 0 240 240" fill="none">
+        <circle cx="120" cy="120" r="99" className="mark-outline" />
+        <circle cx="120" cy="120" r="67" className="mark-outline" />
+        <path
+          d="M120 7v226M7 120h226M40 40l160 160M40 200L200 40"
+          className="mark-guide"
+        />
+        <g className="mark-star" fill="currentColor">
+          <path d="M113 50h14v140h-14z" />
+          <path d="M50 113h140v14H50z" />
+          <path d="m75.45 65.55 99 99-9.9 9.9-99-99z" />
+          <path d="m65.55 164.55 99-99 9.9 9.9-99 99z" />
+        </g>
+        <circle cx="120" cy="21" r="4" fill="currentColor" />
+        <circle cx="219" cy="120" r="4" fill="currentColor" />
+        <circle cx="120" cy="120" r="20" className="mark-core" />
+      </svg>
+      <p className="eyebrow">Think. Build. Ship.</p>
+    </div>
+  );
+}
+export default function Hero() {
+  return (
+    <section className="hero container" aria-labelledby="hero-title">
+      <div className="hero-topline">
+        <p className="eyebrow">{profile.role}</p>
+        <p className="eyebrow muted">
+          <span className="location-dot" />
+          {profile.location}
+        </p>
+      </div>
+      <div className="hero-grid">
+        <div className="hero-heading">
+          <h1 id="hero-title">
+            Reliable
+            <br />
+            software.
+            <br />
+            <span className="serif">Real-world impact.</span>
+          </h1>
+          <div className="hero-actions">
+            <a className="button" href="#work">
+              Explore my work <ArrowDown aria-hidden="true" />
+            </a>
+            <a className="text-link" href={profile.resume} download>
+              Download resume <ArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
         </div>
-    </>
+        <div className="hero-aside">
+          <BuildMark />
+          <p className="hero-intro">{profile.intro}</p>
+          <p className="hero-note eyebrow muted">
+            From first principles
+            <br />
+            to production.
+          </p>
+        </div>
+      </div>
+      <div className="proof-strip" aria-label="Production experience">
+        {profile.proof.map((item) => (
+          <div className="proof-item" key={item.label}>
+            <span className="proof-value">{item.value}</span>
+            <div>
+              <p className="proof-label">{item.label}</p>
+              <p className="proof-detail">{item.detail}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

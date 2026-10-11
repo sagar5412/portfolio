@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-tight-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Instrument Serif";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/instrument-serif-400-italic.woff2") format("woff2");
+}
+:root {
+  color-scheme: light;
+  --paper: #f5f3ed;
+  --surface: #ffffff;
+  --ink: #191919;
+  --muted: #595953;
+  --accent: #b63824;
+  --line: #d6d2c9;
+  --line-dark: #44443f;
+  --panel: #eae7de;
+  --font-sans: "Inter Tight", Arial, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-mono: "Courier New", monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+  --text-2xl: clamp(2.25rem, 4.4vw, 4rem);
+  --text-display: clamp(3.75rem, 7.5vw, 7rem);
+  --text-hero: clamp(4.1rem, 8.1vw, 7.75rem);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --gutter: clamp(1.25rem, 4.45vw, 4rem);
+  --section-space: clamp(4rem, 8vw, 8rem);
+  --content-width: 80rem;
+  --radius: 0.125rem;
+  --border-width: 1px;
+  --focus-width: 3px;
+  --tracking-label: 0.1em;
+  --tracking-heading: -0.055em;
+  --duration: 180ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Component measurements and typography primitives. Breakpoints stay literal: CSS variables cannot be used in media queries. */
+:root {
+  --tracking-brand: -0.035em;
+  --negative-pixel: -1px;
+  --reduced-duration: 0.01ms;
+  --size-0-94-em: 0.94em;
+  --tracking-serif: -0.04em;
+  --size-24-rem: 24rem;
+  --size-13-rem: 13rem;
+  --text-2xs: 0.625rem;
+  --size-3-25-rem: 3.25rem;
+  --size-4-1-rem: 4.1rem;
+  --size-8-7-vw: 8.7vw;
+  --size-8-em: 8em;
+  --size-9-rem: 9rem;
+  --size-2-75-rem: 2.75rem;
+  --size-10-rem: 10rem;
+  --tracking-mobile: 0.06em;
+  --size-15-6-vw: 15.6vw;
+  --size-6-5-rem: 6.5rem;
+  --size-19-rem: 19rem;
+  --size-1-6-rem: 1.6rem;
+  --size-2-5-vw: 2.5vw;
+  --size-2-4-rem: 2.4rem;
+  --size-30-rem: 30rem;
+  --text-diagram: 0.5625rem;
+  --size-8-vw: 8vw;
+  --size-7-rem: 7rem;
+  --size-2-2-vw: 2.2vw;
+  --size-2-25-rem: 2.25rem;
+  --tracking-subheading: -0.025em;
+  --size-11-rem: 11rem;
+  --size-negative-2-75-rem: -2.75rem;
+  --text-fine: 0.5rem;
+  --size-1-8-rem: 1.8rem;
+  --size-3-2-vw: 3.2vw;
+  --size-5-rem: 5rem;
+  --size-10-vw: 10vw;
+  --tracking-numeral: -0.065em;
+  --size-0-6-em: 0.6em;
+  --size-500-ms: 500ms;
+  --text-micro: 0.4375rem;
+  --size-25-rem: 25rem;
+  --size-1-85-rem: 1.85rem;
+  --tracking-monogram: -0.08em;
+  --size-1-2-em: 1.2em;
+  --size-36-rem: 36rem;
+  --size-20-rem: 20rem;
+  --size-40-rem: 40rem;
+  --size-5-5-vw: 5.5vw;
+  --size-5-25-rem: 5.25rem;
+  --size-1-1-rem: 1.1rem;
+  --tracking-copy: -0.02em;
+  --size-1-55-rem: 1.55rem;
+  --size-2-85-rem: 2.85rem;
+  --size-13-em: 13em;
+  --size-2-vw: 2vw;
+  --size-42-rem: 42rem;
+  --size-22-rem: 22rem;
+  --size-15-rem: 15rem;
+  --size-17-rem: 17rem;
+  --size-18-rem: 18rem;
+  --size-3-5-vw: 3.5vw;
+  --size-43-rem: 43rem;
+  --size-41-rem: 41rem;
+  --size-3-5-rem: 3.5rem;
+  --size-6-vw: 6vw;
+  --size-5-5-rem: 5.5rem;
+  --size-28-rem: 28rem;
+  --size-3-2-rem: 3.2rem;
+  --size-13-vw: 13vw;
+  --size-4-5-rem: 4.5rem;
+  --size-2-5-rem: 2.5rem;
+}
