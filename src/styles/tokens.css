@@ -39,7 +39,10 @@
   --text-xl: 1.75rem;
   --text-2xl: clamp(2.25rem, 4.4vw, 4rem);
   --text-display: clamp(3.75rem, 7.5vw, 7rem);
-  --text-hero: clamp(4.1rem, 8.1vw, 7.75rem);
+  --text-hero: clamp(3.7rem, 7.3vw, 7rem);
+  --text-hero-tablet: clamp(3.7rem, 7.8vw, 5.4rem);
+  --text-hero-mobile: clamp(3.7rem, 14vw, 5.85rem);
+  --text-hero-intro-tablet: 1.125rem;
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;

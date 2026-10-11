@@ -20,7 +20,7 @@
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
   align-items: end;
   gap: var(--space-8);
   padding-block: var(--space-7) var(--space-9);
@@ -51,9 +51,9 @@
   padding-bottom: var(--space-1);
 }
 .hero-intro {
-  color: var(--muted);
-  font-size: var(--text-base);
-  line-height: 1.65;
+  color: var(--ink);
+  font-size: var(--text-lg);
+  line-height: 1.6;
   max-width: var(--size-24-rem);
 }
 .hero-note {
@@ -63,8 +63,8 @@
 }
 .build-mark {
   color: var(--accent);
-  width: min(100%, var(--size-13-rem));
-  margin-bottom: var(--space-5);
+  width: min(100%, var(--size-10-rem));
+  margin-bottom: var(--space-4);
 }
 .build-mark svg {
   width: 100%;
@@ -127,18 +127,20 @@
 }
 @media (max-width: 1000px) {
   .hero-grid {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr);
     gap: var(--space-6);
   }
   .hero-heading h1 {
-    font-size: clamp(var(--size-4-1-rem), var(--size-8-7-vw), var(--space-9));
+    font-size: var(--text-hero-tablet);
   }
   .hero-heading .serif {
     max-width: var(--size-8-em);
   }
   .build-mark {
-    width: var(--size-9-rem);
-    margin-bottom: var(--space-2);
+    display: none;
+  }
+  .hero-intro {
+    font-size: var(--text-hero-intro-tablet);
   }
   .proof-item {
     gap: var(--space-3);
@@ -170,11 +172,7 @@
     padding-block: var(--space-7) var(--space-7);
   }
   .hero-heading h1 {
-    font-size: clamp(
-      var(--size-4-1-rem),
-      var(--size-15-6-vw),
-      var(--size-6-5-rem)
-    );
+    font-size: var(--text-hero-mobile);
   }
   .hero-heading .serif {
     max-width: 100%;
@@ -186,24 +184,10 @@
     gap: var(--space-4);
     padding-inline: var(--space-4);
   }
-  .hero-aside {
-    position: relative;
-    padding-right: calc(var(--space-8) + var(--space-4));
-  }
   .hero-intro {
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
   }
   .hero-note {
-    display: none;
-  }
-  .build-mark {
-    position: absolute;
-    width: var(--space-8);
-    right: 0;
-    top: var(--space-1);
-    margin: 0;
-  }
-  .build-mark p {
     display: none;
   }
   .proof-strip {
